@@ -1,17 +1,25 @@
+import 'screens/locations/locations.dart';
 import 'package:flutter/material.dart';
 
-import 'screens/location_detail/location_detail.dart';
-
 import 'style.dart';
+
+const LocationsRoute = '/';
+const LocationDetailRoute = '/location_detail';
 
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LocationDetail(),
+      home: Locations(),
       theme: ThemeData(
-        appBarTheme: AppBarTheme(textTheme: TextTheme(title: AppBarTextStyle)),
+        appBarTheme:
+            AppBarTheme(textTheme: TextTheme(headline6: AppBarTextStyle)),
+        textTheme: TextTheme(
+          headline6: TitleTextStyle,
+          bodyText2: BodyTextStyle,
+        ),
       ),
     );
   }
 }
+// 
