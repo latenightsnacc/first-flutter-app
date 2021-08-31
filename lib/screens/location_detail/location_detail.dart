@@ -13,7 +13,7 @@ class LocationDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final locations = Location.fetchByID(_locationID);
+    final location = Location.fetchByID(_locationID);
 
     return Scaffold(
       appBar: AppBar(
@@ -26,7 +26,7 @@ class LocationDetail extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               ImageBanner(location.imagePath),
-            ]..addAll(textSections(location.locationName)),
+            ]..addAll(textSections(location)),
           ),
         ],
       ),

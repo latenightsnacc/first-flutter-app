@@ -32,7 +32,7 @@ class Location {
     ];
   }
 
-  static Location _fetchByID(int locationID) {
+  static Location fetchByID(int locationID) {
     // fetch all locations, iterate them and when we find the location
     // with the ID we want, return it immediately
     List<Location> locations = Location.fetchAll();
